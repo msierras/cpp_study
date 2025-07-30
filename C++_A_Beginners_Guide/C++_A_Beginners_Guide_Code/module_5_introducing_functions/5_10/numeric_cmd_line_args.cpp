@@ -5,7 +5,7 @@ int main(int argc, char *argv[]){
 
     double a, b;
 
-    if(argc !=3) {  // dont forget that argc is already 1 by default, so the addition of our two num args make argc to 3 instead of 2.
+    if(argc !=3) {  // dont forget that argc is already 1 by default since its taking the place of the program name, so the addition of our two num args make argc to 3 instead of 2.
         cout << "Usage: add num num\n";
         return 1;        
     }
