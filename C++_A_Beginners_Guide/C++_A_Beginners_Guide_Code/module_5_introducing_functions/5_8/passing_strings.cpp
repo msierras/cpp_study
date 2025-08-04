@@ -35,3 +35,6 @@ void strInvertCase(char *str){
         str++;  // move on to the next char
     }
 }
+
+
+void count(long int *ptr);
