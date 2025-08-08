@@ -1,4 +1,4 @@
-// Demonstrate prefix and postfix ++.
+// Demonstrate prefix and postfix ++ and --.
 
 #include <iostream>
 using namespace std;
@@ -16,6 +16,8 @@ class ThreeD{
         // overloading operator(s) prototype(s)
         ThreeD operator++();    // prefix version of ++
         ThreeD operator++(int notused); // postfix version of ++
+        ThreeD operator--();    // prefix version of --
+        ThreeD operator--(int notused); // postfix version of --
 
         // member function prototype(s)
         void show();
@@ -42,6 +44,22 @@ ThreeD ThreeD::operator++(int notused){
     x++;    // increment x, y, and z
     y++;
     z++;
+    return temp;    // return origina value
+}
+
+ThreeD ThreeD::operator--(){    // Overload - for ThreeD
+    x--;    // decrement x, y, and z
+    y--;
+    z--;
+    return *this;   // Return the decremented object
+}
+
+ThreeD ThreeD::operator--(int notused){
+    ThreeD temp = *this;    // save original values
+
+    x--;    // decrement x, y, and z
+    y--;
+    z--;
     return temp;    // return origina value
 }
 
@@ -84,6 +102,21 @@ int main(){
     cout << "Value of b after b = a++: ";
     b.show();
     
+    cout << "\n";
+
+    b = --a;    // b receives a's values after decrement 
+    cout << "Value of a after b = --a: ";
+    a.show();
+    cout << "Value of b after b = --a: ";
+    b.show();
+
+    cout << "\n";
+
+    b = a--;    // b receives a's value prior to decrement 
+    cout << "Value of a after b = a--: ";
+    a.show();
+    cout << "Value of b after b = a--: ";
+    b.show();
 
     return 0;
 }
