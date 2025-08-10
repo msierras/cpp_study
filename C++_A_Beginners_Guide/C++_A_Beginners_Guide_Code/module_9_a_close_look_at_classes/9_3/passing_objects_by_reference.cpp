@@ -42,7 +42,7 @@ int main(){
 
     change(a);  // since change uses a reference to the argument object it will change the argument rather than making a copy
     cout << "After calling change().\n";
-    display(a);
+    display(a); 
 
     return 0; 
 }
