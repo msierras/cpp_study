@@ -1,4 +1,4 @@
-// Use private inheritance. This program won't compile.
+// Demonstrate public inheritance.
 
 #include <iostream>
 using namespace std;
@@ -14,8 +14,8 @@ class B{
 
 };
 
-// Class D is the derived class and B is inherited with private access control.
-class D : private B{
+// Class D is the derived class and B is inherited with public access control.
+class D : public B{
     private:
         int k;
     public:
@@ -32,9 +32,10 @@ class D : private B{
 int main(){
     D ob(3);
 
-    ob.set(1, 2);   // Error, can't access set()
-    ob.show();  // Error, can't access show()
+    ob.set(1, 2);   // access member of base class 
+    ob.show();  // access member of base class
 
+    ob.showk(); // uses member of derived class
 
 
     return 0;

@@ -1,4 +1,4 @@
-// Demonstrate public inheritance.
+// Use private inheritance. This program won't compile.
 
 #include <iostream>
 using namespace std;
@@ -14,8 +14,8 @@ class B{
 
 };
 
-// Class D is the derived class and B is inherited with public access control.
-class D : public B{
+// Class D is the derived class and B is inherited with private access control.
+class D : private B{
     private:
         int k;
     public:
@@ -32,10 +32,13 @@ class D : public B{
 int main(){
     D ob(3);
 
-    ob.set(1, 2);   // access member of base class 
-    ob.show();  // access member of base class
+    /* Class D inherited show() and set() from class B, but because we declared that class D inherits class B with the private
+        access control this makes the initially public set() and show() from class B change to private when being inherited
+        to class D. So, when we try to call set() and show() from a class D object inside of main() we get an error since 
+        the private show() and set() can only be used inside of class D.*/
+    ob.set(1, 2);   // Error, can't access set()
+    ob.show();  // Error, can't access show()
 
-    ob.showk(); // uses member of derived class
 
 
     return 0;
