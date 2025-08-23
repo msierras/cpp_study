@@ -16,4 +16,6 @@ int main() {
         
     for (const auto& [key, value] : mapCopy)
         std::cout << key << ", " << value << '\n';
+
+    return 0; 
 }
