@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-// This is a function template. Since we only have one generic type (class X), each parameter must be of the same type!
+// This is a function template. Since we only have one generic type (X), each parameter must be of the same type!
 // i.e, we can only swap two ints, floats, doubles, etc, but we cant swap an int with a double and so on.
 template <class X> void swapargs(X &a, X &b){
     X temp;
