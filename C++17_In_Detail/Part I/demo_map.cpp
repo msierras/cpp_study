@@ -37,9 +37,11 @@ int main() {
         
     /*
         Range-based for loop to iterate through all elements of mapCopy.
+        
         [key, value] uses structured bindings to unpack each std::pair<const Key, T> into key and value.
+
         std::cout << key << ", " << value << '\n';
-        Prints each key and value pair on its own line.
+            Prints each key and value pair on its own line.
     */
     for (const auto& [key, value] : mapCopy)
         std::cout << key << ", " << value << '\n';
