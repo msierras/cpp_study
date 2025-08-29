@@ -5,10 +5,9 @@
 
 #include <array>
 
-// This example demonstrates **copy elision** in C++17 with a type that is
-// neither copyable nor movable. Thanks to mandatory copy elision (P0135R0),
-// returning such objects from functions is possible without requiring copy/move
-// constructors to exist.
+// This example demonstrates **guaranteed copy elision** in C++17 with a type that is neither copyable nor movable. 
+// Thanks to mandatory copy elision (P0135R0), returning such objects from functions is possible without requiring 
+// copy/move constructors to exist.
 
 // Define a struct that cannot be copied or moved
 struct NonMoveable {
