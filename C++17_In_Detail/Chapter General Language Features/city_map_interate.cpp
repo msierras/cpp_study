@@ -16,6 +16,10 @@ int main() {
         { "Rio de Janeiro", 6'520'000 }
     };
     
-    for (auto&[city, population] : mapCityPopulation)
-        std::cout << city << ": " << population << '\n';
+    // C++17 allows us to bind to a pair of [key, val] so we can use those names in the loop
+    for (auto&[city, population] : mapCityPopulation)   
+        std::cout << city << ": " << population << '\n';    // Notice how city and population are used here! 
+
+    // Before C++17 we would have had to operate on an iterator from the map - which returns a pair <first, second>!
+    // Using the real names key/value is more expressive 
 }
