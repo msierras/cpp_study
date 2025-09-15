@@ -3,7 +3,9 @@
 // by Bartlomiej Filipek
 // 2018/2019
 
+#include <iostream>
 #include <optional>
+
 
 struct Point {
     Point(int a, int b) : x(a), y(b) { }
@@ -16,5 +18,7 @@ int main() {
     std::optional<Point> opt{std::in_place, 0, 1};
     std::optional<Point> opt2{{0, 1}};
 
-    return sizeof(Point);
+    std::cout <<  sizeof(Point);
+
+    return 0; 
 }
