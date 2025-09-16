@@ -1,0 +1,1 @@
+    return p; // this one moves, so it's fine with unique_ptr
