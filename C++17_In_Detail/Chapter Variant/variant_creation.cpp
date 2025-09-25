@@ -11,8 +11,9 @@
 
 
 class NotSimple {
-public:
-    NotSimple(int, float) { }
+    public:
+        // NotSimple class constructor(s) 
+        NotSimple(int, float) { }
 };
 
 
