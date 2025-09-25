@@ -8,10 +8,14 @@
 #include <cassert>
 #include <vector>
 
+
+
 class NotSimple {
 public:
     NotSimple(int, float) { }
 };
+
+
 
 int main() {
     // default initializatoin: (the first type has to has a default ctor(constructor) )
