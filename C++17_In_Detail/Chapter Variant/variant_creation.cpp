@@ -14,7 +14,7 @@ public:
 };
 
 int main() {
-    // default initializatoin: (the first type has to has a default ctor)
+    // default initializatoin: (the first type has to has a default ctor(constructor) )
     std::variant<int, float> intFloat;
     std::cout << intFloat.index() << ", value " << std::get<int>(intFloat) << '\n';
     
